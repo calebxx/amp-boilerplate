@@ -60,22 +60,31 @@
         </style>
         <style amp-custom>
             #control-bar {
+                box-sizing: border-box;
                 position: fixed;
+
                 left: 0;
-                bottom: 100px;
+                bottom: 0;
                 width: 100%;
                 height: 44px;
+                padding: 2px;
+                
                 display: flex;
             }
             amp-social-share {
-                border-radius: 4px;
+                border-radius: 3px;
             }
-            amp-social-share.custom-style {
-                background-color: #008080;
-                background-image: url('https://raw.githubusercontent.com/google/material-design-icons/master/social/1x_web/ic_share_white_48dp.png');
+            amp-social-share.facebook {
+                margin-right: 2px;
+                flex: 1 100%;
+                background-size: 30px;
+            }
+            amp-social-share.system {
+                background-color: #2f3846;
+                background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAAGWB6gOAAAABGdBTUEAALGPC/xhBQAAA3tJREFUWAntlz9oFEEUxnPRIKhgIoIpFNSIhaKIGAVFQ5CAWBtBLGObVjQIYiFikSZVChUEEW21k4CNBIwWWqSxEBT/oCQYxRjB4Pn7Jvv2Zndnc3vr5SoffPfevPnmmzcz++/a2vKsWq32qA/vTMFUmtyeToiaSaZJkurXT4+gXnzVsfBnMvTyCeTGM4WT/ABWSRY/7eQJ4tURz6fnJJdcWKVSWZcmNaetqaTUju8G8S4pSfsJEOEt7osSF9RhRvu3F/9QvNoS8hCqFF+xHOF6xfGx0T/kE4yYINE44nf4cayEypDf4ccxyU82LdYisbsmmNgBS9bzCHTAOQj2SA0/qu27oUbAek2QPuM8tpw8+Wnw1eUIpkDi8IxM/g2Ytbbvyb/227lLg6iSuziFOX+AxeR3KRZP5x08Efp0LwzmiZiY74MVIdDw/RKsyJ+pcMwyhrXOf7HCk6WJTLoBuAeO9ZVd2mkEFhErO97md8d+SdthmVKKjN+CwCvwwsTc8dNwT3ZTj/wCl8FHy8E5QTxhbbyutV9q07fbXZlSTVl8W5DvAH+i/j4NlNHeHOUOWCJep0t4PxB3RuTLXtoXORrnRYwbXkB6YySy30u7kPx5oKXWTORaqxYpj52rZcIRnKVqxU5TSI2AeJ/S/daGMwB+ujZBSEjpTTYgz8M5BZxQ5jqiQ4/RNo5+Jk8glM8IQToOrofIy+aoILO0ZQd4nQzNX5rHaygMLa0hASM3Tchu2tL7REXjVlXLPIdzR4eLPQCJJ2zLikhPRCHuwaqqsNsg/thKc1vaphC/sDGbfEWrY1K9CE5G6MfX+w4Y0bN3K5gARe07xGO2It+T7wOTwLf3NG6BQbAdrNUYvF4c+kiTzYJ9TovgmTLYNaDilkOnX0AkvIMxz4HZU4L4izHA9wv5BvdQgkNCX4+y4Bdkguw14G8D7zQQmwGHve5gCEcXsWwe9OWRGi4IsXtSxeZA5s0ZnKhgsqEnI5N3Ab2ezoL7vKo6wcuCc2VoaFXAGFh6uYpBo9AOwVsDPgHZ1Yx6iQQ6eovJ4oIa2aFHzNkNbrIrV0rMX2hIoYJYgf54DgC9qy4WUi5JCv6RSWuxI5PkVvQhanMW2iEjt8L/L6jeLusacv9o8L1cvEP1BjS5f2+kt2C6ejDpDTwM9LCr9za2cc3yiwg9BKPcOJ8l+hdx8GBUDajLrgAAAABJRU5ErkJggg==");
                 background-repeat: no-repeat;
                 background-position: center;
-                background-size: contain;
+                background-size: 20px;
             }
         </style>
         <noscript>
@@ -96,7 +105,7 @@
                 <article class="page-content">
                     <div class="logo-container">
                         <amp-img
-                            src="/assets/calf_logo.png"
+                            src="/calf_logo.png"
                             width="210"
                             height="124"
                             layout="responsive"
@@ -107,11 +116,9 @@
                 </article>
             </main>
             <div id="control-bar">
-                <amp-social-share type="facebook" data-param-app_id="254325784911610"></amp-social-share>
-                <amp-social-share type="twitter"></amp-social-share>
-                <amp-social-share type="system" class="custom-style"></amp-social-share>
+                <amp-social-share height="40px" class="facebook" type="facebook" data-param-app_id="254325784911610"></amp-social-share>
+                <amp-social-share width="76px" height="40px" type="system" class="system"></amp-social-share>
             </div>
         </div>
     </body>
 </html>
-
