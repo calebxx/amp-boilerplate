@@ -1,125 +1,64 @@
-<!doctype html>
-<html ⚡>
+<!DOCTYPE html>
+<html lang="zh">
     <head>
-        <title>amp is a question</title>
-        <meta charset="utf-8" />
-        <script async src="https://cdn.ampproject.org/v0.js"></script>
-        <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
-        <link
-            rel="canonical"
-            href="https://amp.dev/documentation/examples/introduction/hello_world/index.html"
-        />
-        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
-        <style amp-boilerplate>
-            body {
-                -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-                -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-                -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-                animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-            }
-            @-webkit-keyframes -amp-start {
-                from {
-                    visibility: hidden;
-                }
-                to {
-                    visibility: visible;
-                }
-            }
-            @-moz-keyframes -amp-start {
-                from {
-                    visibility: hidden;
-                }
-                to {
-                    visibility: visible;
-                }
-            }
-            @-ms-keyframes -amp-start {
-                from {
-                    visibility: hidden;
-                }
-                to {
-                    visibility: visible;
-                }
-            }
-            @-o-keyframes -amp-start {
-                from {
-                    visibility: hidden;
-                }
-                to {
-                    visibility: visible;
-                }
-            }
-            @keyframes -amp-start {
-                from {
-                    visibility: hidden;
-                }
-                to {
-                    visibility: visible;
-                }
-            }
-        </style>
-        <style amp-custom>
-            #control-bar {
-                box-sizing: border-box;
-                position: fixed;
-
-                left: 0;
-                bottom: 0;
-                width: 100%;
-                height: 44px;
-                padding: 2px;
-                
-                display: flex;
-            }
-            amp-social-share {
-                border-radius: 3px;
-            }
-            amp-social-share.facebook {
-                margin-right: 2px;
-                flex: 1 100%;
-                background-size: 30px;
-            }
-            amp-social-share.system {
-                background-color: #2f3846;
-                background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAAGWB6gOAAAABGdBTUEAALGPC/xhBQAAA3tJREFUWAntlz9oFEEUxnPRIKhgIoIpFNSIhaKIGAVFQ5CAWBtBLGObVjQIYiFikSZVChUEEW21k4CNBIwWWqSxEBT/oCQYxRjB4Pn7Jvv2Zndnc3vr5SoffPfevPnmmzcz++/a2vKsWq32qA/vTMFUmtyeToiaSaZJkurXT4+gXnzVsfBnMvTyCeTGM4WT/ABWSRY/7eQJ4tURz6fnJJdcWKVSWZcmNaetqaTUju8G8S4pSfsJEOEt7osSF9RhRvu3F/9QvNoS8hCqFF+xHOF6xfGx0T/kE4yYINE44nf4cayEypDf4ccxyU82LdYisbsmmNgBS9bzCHTAOQj2SA0/qu27oUbAek2QPuM8tpw8+Wnw1eUIpkDi8IxM/g2Ytbbvyb/227lLg6iSuziFOX+AxeR3KRZP5x08Efp0LwzmiZiY74MVIdDw/RKsyJ+pcMwyhrXOf7HCk6WJTLoBuAeO9ZVd2mkEFhErO97md8d+SdthmVKKjN+CwCvwwsTc8dNwT3ZTj/wCl8FHy8E5QTxhbbyutV9q07fbXZlSTVl8W5DvAH+i/j4NlNHeHOUOWCJep0t4PxB3RuTLXtoXORrnRYwbXkB6YySy30u7kPx5oKXWTORaqxYpj52rZcIRnKVqxU5TSI2AeJ/S/daGMwB+ujZBSEjpTTYgz8M5BZxQ5jqiQ4/RNo5+Jk8glM8IQToOrofIy+aoILO0ZQd4nQzNX5rHaygMLa0hASM3Tchu2tL7REXjVlXLPIdzR4eLPQCJJ2zLikhPRCHuwaqqsNsg/thKc1vaphC/sDGbfEWrY1K9CE5G6MfX+w4Y0bN3K5gARe07xGO2It+T7wOTwLf3NG6BQbAdrNUYvF4c+kiTzYJ9TovgmTLYNaDilkOnX0AkvIMxz4HZU4L4izHA9wv5BvdQgkNCX4+y4Bdkguw14G8D7zQQmwGHve5gCEcXsWwe9OWRGi4IsXtSxeZA5s0ZnKhgsqEnI5N3Ab2ezoL7vKo6wcuCc2VoaFXAGFh6uYpBo9AOwVsDPgHZ1Yx6iQQ6eovJ4oIa2aFHzNkNbrIrV0rMX2hIoYJYgf54DgC9qy4WUi5JCv6RSWuxI5PkVvQhanMW2iEjt8L/L6jeLusacv9o8L1cvEP1BjS5f2+kt2C6ejDpDTwM9LCr9za2cc3yiwg9BKPcOJ8l+hdx8GBUDajLrgAAAABJRU5ErkJggg==");
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: 20px;
-            }
-        </style>
-        <noscript>
-            <style amp-boilerplate>
-                body {
-                    -webkit-animation: none;
-                    -moz-animation: none;
-                    -ms-animation: none;
-                    animation: none;
-                }
-            </style>
-        </noscript>
+        <title>Hello</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+        <script src="index.js"></script>
+        <link type="text/css" rel="stylesheet" href="index.css">
     </head>
-
     <body>
         <div class="page">
             <main class="main">
-                <article class="page-content">
-                    <div class="logo-container">
-                        <amp-img
-                            src="https://media1.popsugar-assets.com/files/thumbor/kpVJV7Lsba4NtNKyNJo-c_K8e8U/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2019/05/11/951/n/1922243/d7dda7e95cd7439b952c85.55278521_/i/Shop-Homepage-Module-91318.jpg"
-                            width="760"
-                            height="760"
-                            layout="responsive"
-                            alt="logo"
-                            class="logo"
-                        />
-                        <h1>Hola :)</h1>
+                <figure class="slide">
+                    <div class="image-anchor">
+                        <div class="image-section">
+                            <img src="https://s3-img.meituan.net/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0h/p0/4b_44788.jpg@596w_1l.jpg" alt="">
+                        </div>
                     </div>
-                </article>
+                    <div class="slide-anchor">
+                        <div class="slide-section">
+                            <div class="slide-content">
+                                <h2>hello world</h2>
+                            </div>
+                        </div>
+                    </div>
+                </figure>
+
+                <figure class="slide">
+                    <div class="image-anchor">
+                        <div class="image-section">
+                            <img src="https://s3-img.meituan.net/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0h/p0/4b_44788.jpg@596w_1l.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="slide-anchor">
+                        <div class="slide-section">
+                            <div class="slide-content">
+                                <h2>hello world</h2>
+                            </div>
+                        </div>
+                    </div>
+                </figure>
+
+                <figure class="slide">
+                    <div class="image-anchor">
+                        <div class="image-section">
+                            <img src="https://s3-img.meituan.net/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0h/p0/4b_44788.jpg@596w_1l.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="slide-anchor">
+                        <div class="slide-section">
+                            <div class="slide-content">
+                                <h2>hello world</h2>
+                            </div>
+                        </div>
+                    </div>
+                </figure>
+                <footer class="footer">
+                    long footer
+                </footer>
             </main>
-            <div id="control-bar">
-                <amp-social-share height="40px" class="facebook" type="facebook" data-param-app_id="254325784911610"></amp-social-share>
-                <amp-social-share width="76px" height="40px" type="system" class="system"></amp-social-share>
-            </div>
         </div>
     </body>
 </html>
