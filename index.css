@@ -1097,6 +1097,10 @@ form.is-inline .form-buttons {
   height: 500px;
   background: #333; }
 
+.slide {
+  position: relative;
+}
+
 .slide::after {
   display: table;
   content: "";
