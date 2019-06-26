@@ -1132,3 +1132,14 @@ form.is-inline .form-buttons {
   .slide-anchor .slide-section {
     height: 200px;
     background: #fff; }
+
+.nav {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+}
